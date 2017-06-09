@@ -5,7 +5,7 @@
         $.getJSON("config.json", "", function(data) {
     　      //each循环 使用$.each方法遍历返回的数据date
             $.each(data, function(i, item) {
-                console.log("标题："+item.title + "/t路径："+item.url + "\t时间：" + item.time);
+                console.log("标题："+item.title + "\t路径："+item.url + "\t时间：" + item.time);
             });
         });
     }
