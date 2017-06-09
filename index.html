@@ -10,8 +10,11 @@
                 //each循环 使用$.each方法遍历返回的数据date
                 console.log(data);
             },
-            error:function(data){
-                console.log(data);
+            error:function(XMLHttpRequest, textStatus, errorThrown){
+                console.log(XMLHttpRequest.status);
+                console.log(XMLHttpRequest.readyState);
+                console.log(textStatus);
+                console.log(errorThrown);
             }
         })
     }
