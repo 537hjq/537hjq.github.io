@@ -2,21 +2,11 @@
 <script type="text/javascript">
     getJson();
     function getJson(){
-        $.ajax({
-            url: "https://537hjq.github.io/config.json",//json文件位置
-            type: "GET",//请求方式为get
-            dataType: "json", //返回数据格式为json
-            success: function(data) {//请求成功完成后要执行的方法 
-                //each循环 使用$.each方法遍历返回的数据date
-                console.log(data);
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrown){
-                console.log(XMLHttpRequest.status);
-                console.log(XMLHttpRequest.readyState);
-                console.log(textStatus);
-                console.log(errorThrown);
-            }
-        })
+        $.getJSON("config.json", "", function(data) {
+    　      //each循环 使用$.each方法遍历返回的数据date
+            $.each(data.first, function(i, item) {
+                console.log("标题："+item.title + "/t路径："+item.url + "\t时间：" + item.time);
+        });
     }
 </script> 
 <h3>1.11原汁原味服内测火爆开放！</h3>
