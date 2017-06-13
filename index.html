@@ -1,59 +1,126 @@
-<!DOCTYPE HTML>  
-<html>  
-<head>  
-<meta charset="gb2312" />  
-<title>MODEL PAGE</title>  
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-<script type="text/javascript" src="js/jquery-1.10.4.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    getJson();
-    function getJson(){
-        $.getJSON("config.json", "", function(data) {
-    　      //each循环 使用$.each方法遍历返回的数据date
-            $.each(data, function(i, item) {
-                console.log("标题："+item.title + "\t路径："+item.url + "\t时间：" + item.time);
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312" />
+    <title>MODEL PAGE</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.10.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        getJson();
+        function getJson() {
+            $.getJSON("config.json", "", function (data) {
+                //each循环 使用$.each方法遍历返回的数据date
+                $.each(data, function (i, item) {
+                    console.log("标题：" + item.title + "\t路径：" + item.url + "\t时间：" + item.time);
+                });
             });
-        });
-    }
-</script>   
-</head>  
-<body>  
+        }
+    </script>
+    <style type="text/css">
+        .titlelnk {
+            font-size: 14px;
+            margin: 0 0 5px 0;
+        }
+
+        p {
+            line-height: 1.8em;
+            margin-bottom: 5px;
+            color: #333;
+            overflow: hidden;
+            padding-right: 5px;
+            font-size: 12px;
+            padding-top: 5px;
+            font-size: 12px;
+            font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
+        }
+
+        .post_item_foot {
+            color: #555;
+            padding-top: 5px;
+            margin-left: 10px;
+            font-size: 12px;
+            font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
+            margin: 0 0 5px 0;
+        }
+    </style> 
+</head>
+<body>
     <div style="padding: 20px 0; overflow: hidden;">
-    <div class="col-xs-3">
-	<div class="panel panel-primary">
-	    <div class="panel-heading">
-		<h3 class="panel-title">信息</h3>
-	    </div>
-	    <div class="panel-body" style="">
-		<div>
-		    <p>这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。</p>
+        <div class="col-xs-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">信息</h3>
                 </div>
-	    </div>
-	</div>
-    </div>
-    <div class="col-xs-9">
-        <div class="panel panel-primary">
-	    <div class="panel-heading">
-		<h3 class="panel-title">文章列表</h3>
-	    </div>
-	    <div class="panel-body" style="">
-		<div>
-                    //<a href="https://cloud.nayo.moe/Game/千金镇专用客户端.rar">点击下载</a> 
-		    <p>这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。</p>
+                <div class="panel-body" style="">
+                    <div>
+                        <p>这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。</p>
+                    </div>
                 </div>
-	    </div>
-		<div style="height: 600px; overflow: auto;">
-	    <ul class="list-group">
-		<li class="list-group-item">免费域名注册</li>
-		<li class="list-group-item">免费 Window 空间托管</li>
-		<li class="list-group-item">图像的数量</li>
-		<li class="list-group-item">24*7 支持</li>
-		<li class="list-group-item">每年更新成本</li>
-	    </ul>
-			</div>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">文章列表</h3>
+                </div>
+                <div class="panel-body" style="">
+                    <div>
+                        //<a href="https://cloud.nayo.moe/Game/千金镇专用客户端.rar">点击下载</a>
+                        <p>这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。 这是一个基本的面板内容。这是一个基本的面板内容。</p>
+                    </div>
+                </div>
+                <div style="height: 600px; overflow: auto;">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3><a class="titlelnk" href="http://www.cnblogs.com/heitao/p/6987319.html" target="_blank">Vulkan Tutorial 14 Integration pipeline</a></h3>
+                            <p>
+                                操作系统:Windows8.1 显卡:Nivida GTX965M 开发工具：Visual Studio 2017 我们现在整合前几章节的结构体和对象创建图形管线！以下是我们现在用到的对象类型，作为一个快速回顾: Shader stages: 着色器模块定义了图形管线可编程阶段的功能 Fixed-f ...
+                            </p>
+                            <div class="post_item_foot">
+                                发布于 2017-06-13 11:00
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h3><a class="titlelnk" href="http://www.cnblogs.com/heitao/p/6987319.html" target="_blank">Vulkan Tutorial 14 Integration pipeline</a></h3>
+                            <p>
+                                操作系统:Windows8.1 显卡:Nivida GTX965M 开发工具：Visual Studio 2017 我们现在整合前几章节的结构体和对象创建图形管线！以下是我们现在用到的对象类型，作为一个快速回顾: Shader stages: 着色器模块定义了图形管线可编程阶段的功能 Fixed-f ...
+                            </p>
+                            <div class="post_item_foot">
+                                发布于 2017-06-13 11:00
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h3><a class="titlelnk" href="http://www.cnblogs.com/heitao/p/6987319.html" target="_blank">Vulkan Tutorial 14 Integration pipeline</a></h3>
+                            <p>
+                                操作系统:Windows8.1 显卡:Nivida GTX965M 开发工具：Visual Studio 2017 我们现在整合前几章节的结构体和对象创建图形管线！以下是我们现在用到的对象类型，作为一个快速回顾: Shader stages: 着色器模块定义了图形管线可编程阶段的功能 Fixed-f ...
+                            </p>
+                            <div class="post_item_foot">
+                                发布于 2017-06-13 11:00
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h3><a class="titlelnk" href="http://www.cnblogs.com/heitao/p/6987319.html" target="_blank">Vulkan Tutorial 14 Integration pipeline</a></h3>
+                            <p>
+                                操作系统:Windows8.1 显卡:Nivida GTX965M 开发工具：Visual Studio 2017 我们现在整合前几章节的结构体和对象创建图形管线！以下是我们现在用到的对象类型，作为一个快速回顾: Shader stages: 着色器模块定义了图形管线可编程阶段的功能 Fixed-f ...
+                            </p>
+                            <div class="post_item_foot">
+                                发布于 2017-06-13 11:00
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h3><a class="titlelnk" href="http://www.cnblogs.com/heitao/p/6987319.html" target="_blank">Vulkan Tutorial 14 Integration pipeline</a></h3>
+                            <p>
+                                操作系统:Windows8.1 显卡:Nivida GTX965M 开发工具：Visual Studio 2017 我们现在整合前几章节的结构体和对象创建图形管线！以下是我们现在用到的对象类型，作为一个快速回顾: Shader stages: 着色器模块定义了图形管线可编程阶段的功能 Fixed-f ...
+                            </p>
+                            <div class="post_item_foot">
+                                发布于 2017-06-13 11:00
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-</body>  
-</html>  
+</body>
+</html>
